@@ -7,10 +7,19 @@
 ## Tech Stack
 
 - **Framework**: Next.js 16 (App Router)
+- **Language**: TypeScript (strict mode)
 - **Styling**: Tailwind CSS v4 (utility-first)
 - **Components**: Shadcn/UI (`@/components/ui/*`)
 - **Icons**: Lucide React
 - **State**: React hooks only (useState, useReducer, useEffect, useRef)
+
+## TypeScript Guidelines
+
+- All new files must use `.ts` or `.tsx` extensions
+- Use strict TypeScript - no `any` types unless absolutely necessary
+- Define interfaces for component props (e.g., `interface ButtonProps { ... }`)
+- Use type inference where possible to reduce verbosity
+- Export types/interfaces that may be reused across components
 
 ## Critical Constraints
 
@@ -81,32 +90,41 @@
 
 ```
 /app
-  layout.js           # Root layout with Navbar, Footer
-  page.js             # Home page
-  /gallery/page.js    # Gallery page
-  /contact/page.js    # Contact page
+  layout.tsx          # Root layout with Navbar, Footer
+  page.tsx            # Home page
+  /gallery/page.tsx   # Gallery page
+  /contact/page.tsx   # Contact page
+  /media-day/page.tsx # Media Day page
   globals.css         # Tailwind + custom CSS
 
 /components
-  /ui                 # Shadcn components
-  Navbar.jsx
-  Footer.jsx
-  Hero.jsx
-  FeaturedGallery.jsx
-  ServicesOverview.jsx
-  CTASection.jsx
-  GalleryGrid.jsx
-  GalleryLightbox.jsx
-  ContactForm.jsx
-  ContactInfo.jsx
+  /ui                 # Shadcn components (tsx)
+  Navbar.tsx
+  Footer.tsx
+  Hero.tsx
+  FeaturedGallery.tsx
+  ServicesOverview.tsx
+  CTASection.tsx
+  GalleryGrid.tsx
+  GalleryLightbox.tsx
+  ContactForm.tsx
+  ContactInfo.tsx
+  PageHeader.tsx
+  SectionHeader.tsx
+  PricingCard.tsx
+  FeatureCard.tsx
 
 /hooks
-  useIntersectionObserver.js
-  useFormValidation.js
+  useIntersectionObserver.ts
+  useFormValidation.ts
 
 /data
-  images.js           # Image placeholder data
-  services.js         # Services & brand info
+  images.ts           # Image placeholder data
+  services.ts         # Services & brand info
+  mediaDay.ts         # Media day packages & pricing
+
+/types
+  index.ts            # Shared TypeScript interfaces
 ```
 
 ## Available Shadcn Components
