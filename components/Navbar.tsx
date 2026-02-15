@@ -22,6 +22,7 @@ interface SocialLink {
 
 const navLinks: NavLink[] = [
   { href: "/", label: "Home" },
+  { href: "/about", label: "About" },
   { href: "/media-day", label: "Media Day" },
   { href: "/gallery", label: "Gallery" },
   { href: "/contact", label: "Contact" },
